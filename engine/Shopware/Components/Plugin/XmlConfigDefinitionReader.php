@@ -112,7 +112,7 @@ class XmlConfigDefinitionReader
     {
         $element = [];
 
-        $isRequired = $entry->getAttribute('required') ? XmlUtils::phpize($entry->getAttribute('required')) : false;
+        $isRequired = $entry->getAttribute('required') ? XmlUtils::phpize($entry->getAttribute('required')) : true;
         $type = $entry->getAttribute('type') ?: 'text';
 
         $scope = $entry->getAttribute('scope') ?: 'locale';
